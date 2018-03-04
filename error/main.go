@@ -24,6 +24,12 @@ func main() {
 	} else {
 		fmt.Println(r)
 	}
+	// inline handling error
+	if x, err := Div(25, 0); err != nil {
+		fmt.Println("Terjadi error : ", err.Error())
+	} else {
+		fmt.Println(x)
+	}
 }
 
 func Div(x, y int) (int, error) {
